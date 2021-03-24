@@ -23,14 +23,15 @@ public class ChessResults {
                                 Integer.parseInt(array[4]),
                                 Integer.parseInt(array[5])}));
             }
+
             Collections.sort(competitors);
+            Collections.reverse(competitors);
             List<String> result = new ArrayList<>();
 
             for (Competitor competitor : competitors) {
                 result.add(competitor.getName());
             }
 
-            Collections.reverse(result);
             return result;
         } catch (IOException e) {
             System.out.println("File not found!");
