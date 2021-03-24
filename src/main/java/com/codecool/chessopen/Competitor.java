@@ -2,12 +2,10 @@ package com.codecool.chessopen;
 
 public class Competitor implements Comparable<Competitor> {
     private String name;
-    private int[] results;
     private int maxScore;
 
     public Competitor(String name, int[] results) {
         this.name = name;
-        this.results = results;
         setMaxScore(results);
     }
 
